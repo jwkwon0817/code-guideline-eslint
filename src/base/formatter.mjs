@@ -254,13 +254,29 @@ const config = {
     '@stylistic/padding-line-between-statements': [
       'error',
       {
-        blankLine: 'always', prev: 'import', next: '*',
+        blankLine: 'always',
+        prev:      '*',
+        next:      '*',
       },
       {
-        blankLine: 'always', prev: '*', next: 'import',
+        blankLine: 'any',
+        prev:      'import',
+        next:      'import',
       },
       {
-        blankLine: 'never', prev: 'import', next: 'import',
+        blankLine: 'never',
+        prev:      'singleline-export',
+        next:      'singleline-export',
+      },
+      {
+        blankLine: 'never',
+        prev:      'singleline-const',
+        next:      'singleline-const',
+      },
+      {
+        blankLine: 'never',
+        prev:      'let',
+        next:      'let',
       },
     ],
 

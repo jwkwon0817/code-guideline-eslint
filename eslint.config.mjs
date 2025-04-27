@@ -1,3 +1,3 @@
 import eslintCodeGuideline from './src/index.mjs';
 
-export default eslintCodeGuideline({ extends: 'react' });
+export default eslintCodeGuideline();
