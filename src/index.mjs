@@ -29,12 +29,10 @@ const defaultConfig = [
   ...baseRestrictConfig,
 ];
 
-function eslintCodeGuideline(config) {
-  if (!config) {
+function eslintCodeGuideline(extendsConfig) {
+  if (!extendsConfig) {
     return defaultConfig;
   }
-
-  const { options, extends: extendsConfig } = config;
 
   let configs = [...defaultConfig];
 
@@ -44,10 +42,6 @@ function eslintCodeGuideline(config) {
     extendItems.forEach(item => {
       configs = [...configs, ...configMap[item]];
     });
-  }
-
-  if (options) {
-    configs = [...configs, ...Array.isArray(options) ? options : [options]];
   }
 
   return configs;
