@@ -49,7 +49,4 @@ function eslintCodeGuideline(config) {
   return configs;
 }
 
-console.log(eslintCodeGuideline({ extends: 'react' }));
-console.log(eslintCodeGuideline());
-
 export default eslintCodeGuideline;
