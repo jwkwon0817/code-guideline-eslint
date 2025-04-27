@@ -1,6 +1,6 @@
 {
   "name": "@code-guideline/eslint",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Code Guideline for eslint",
   "main": "index.js",
   "scripts": {
