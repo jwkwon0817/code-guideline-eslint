@@ -277,11 +277,9 @@ const config = {
 
     '@stylistic/padding-line-between-statements': [
       'error',
-      { 
-        blankLine: 'always', 
-        prev: '*', 
-        next: '*' 
-      },
+      { blankLine: 'always', prev: 'import', next: '*' },
+      { blankLine: 'always', prev: '*', next: 'import' },
+      { blankLine: 'never', prev: 'import', next: 'import' },
     ],
 
     '@stylistic/quote-props': ['error', 'as-needed'],
