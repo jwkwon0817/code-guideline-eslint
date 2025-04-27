@@ -18,14 +18,7 @@ const config = {
       },
     ],
 
-    '@stylistic/array-bracket-spacing': [
-      'error', 
-      {
-        singleValue: false,
-        objectsInArrays: false,
-        arraysInArrays: false,
-      },
-    ],
+    '@stylistic/array-bracket-spacing': [ 'error', 'never' ],
 
     '@stylistic/array-element-newline': [
       'error',
