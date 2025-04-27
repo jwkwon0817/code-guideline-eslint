@@ -38,12 +38,18 @@ function eslintCodeGuideline(config) {
 
   if (extendsConfig) {
     const extendItems = Array.isArray(extendsConfig) ? extendsConfig : [extendsConfig];
-    configs = [...configs, ...extendItems.map(item => configMap[item]).filter(Boolean)];
+
+    extendItems.forEach((item) => {
+      configs = [...configs, ...configMap[item]];
+    })
   }
 
   if (options) { configs = [...configs, ...Array.isArray(options) ? options : [options]]; }
 
   return configs;
 }
+
+console.log(eslintCodeGuideline({ extends: 'react' }));
+console.log(eslintCodeGuideline());
 
 export default eslintCodeGuideline;
