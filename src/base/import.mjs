@@ -1,5 +1,5 @@
-import * as importNewLines from 'eslint-plugin-import-newlines';
-import * as simpleImportSort from 'eslint-plugin-simple-import-sort';
+import importNewLines from 'eslint-plugin-import-newlines';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import unusedImports from 'eslint-plugin-unused-imports';
 
 /**
