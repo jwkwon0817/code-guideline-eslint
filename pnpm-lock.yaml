@@ -39,6 +39,9 @@ importers:
         specifier: ^4.1.4
         version: 4.1.4(@typescript-eslint/eslint-plugin@8.31.0(@typescript-eslint/parser@8.31.0(eslint@9.25.1)(typescript@5.8.3))(eslint@9.25.1)(typescript@5.8.3))(eslint@9.25.1)
     devDependencies:
+      '@code-guideline/eslint':
+        specifier: ^0.0.5
+        version: 0.0.5(eslint@9.25.1)(typescript@5.8.3)
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1
@@ -53,6 +56,11 @@ importers:
         version: 4.2.0(eslint@9.25.1)(typescript@5.8.3)
 
 packages:
+
+  '@code-guideline/eslint@0.0.5':
+    resolution: {integrity: sha512-hf97/2Qf8vk1z0wINjkjkHfRAlsDn24Zs1IEdzY62CdHt1A1PnptNAkdMLZ5DuZvoo7Cla6cqgu5ebqFAsHm0g==}
+    peerDependencies:
+      eslint: ^9.25.1
 
   '@esbuild/aix-ppc64@0.25.3':
     resolution: {integrity: sha512-W8bFfPA8DowP8l//sxjJLSLkD8iEjMc7cBVyP+u4cEv9sM7mdUCkgsj+t0n/BWPFtv7WWCN5Yzj0N6FJNUUqBQ==}
@@ -1570,6 +1578,24 @@ packages:
     engines: {node: '>=10'}
 
 snapshots:
+
+  '@code-guideline/eslint@0.0.5(eslint@9.25.1)(typescript@5.8.3)':
+    dependencies:
+      '@stylistic/eslint-plugin': 4.2.0(eslint@9.25.1)(typescript@5.8.3)
+      '@typescript-eslint/eslint-plugin': 8.31.0(@typescript-eslint/parser@8.31.0(eslint@9.25.1)(typescript@5.8.3))(eslint@9.25.1)(typescript@5.8.3)
+      '@typescript-eslint/parser': 8.31.0(eslint@9.25.1)(typescript@5.8.3)
+      eslint: 9.25.1
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.31.0(eslint@9.25.1)(typescript@5.8.3))(eslint@9.25.1)
+      eslint-plugin-import-newlines: 1.4.0(eslint@9.25.1)
+      eslint-plugin-newline-destructuring: 1.2.2(eslint@9.25.1)
+      eslint-plugin-promise: 7.2.1(eslint@9.25.1)
+      eslint-plugin-simple-import-sort: 12.1.1(eslint@9.25.1)
+      eslint-plugin-unused-imports: 4.1.4(@typescript-eslint/eslint-plugin@8.31.0(@typescript-eslint/parser@8.31.0(eslint@9.25.1)(typescript@5.8.3))(eslint@9.25.1)(typescript@5.8.3))(eslint@9.25.1)
+    transitivePeerDependencies:
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
+      - supports-color
+      - typescript
 
   '@esbuild/aix-ppc64@0.25.3':
     optional: true

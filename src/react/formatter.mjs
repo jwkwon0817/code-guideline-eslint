@@ -22,11 +22,11 @@ const config = {
     ],
 
     '@stylistic/jsx-curly-newline': [
-      'error', 
+      'error',
       {
-        multiline: 'consistent',
+        multiline:  'consistent',
         singleline: 'forbid',
-      }
+      },
     ],
 
     '@stylistic/jsx-curly-spacing': [
@@ -47,7 +47,12 @@ const config = {
 
     '@stylistic/jsx-max-props-per-line': 'error',
 
-    '@stylistic/jsx-newline': ['error', { prevent: true, allowMultilines: true }],
+    '@stylistic/jsx-newline': [
+      'error',
+      {
+        prevent: true, allowMultilines: true,
+      },
+    ],
 
     '@stylistic/jsx-one-expression-per-line': ['error', { allow: 'non-jsx' }],
 
@@ -68,7 +73,7 @@ const config = {
       {
         component: true,
         html:      true,
-      }
+      },
     ],
 
     '@stylistic/jsx-sort-props': [
@@ -86,9 +91,9 @@ const config = {
     '@stylistic/jsx-tag-spacing': [
       'error',
       {
-        closingSlash:  'allow',
-        beforeClosing: 'never',
-        beforeSelfClosing: 'always'
+        closingSlash:      'allow',
+        beforeClosing:     'never',
+        beforeSelfClosing: 'always',
       },
     ],
 

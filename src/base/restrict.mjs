@@ -1,5 +1,4 @@
 import typescript from '@typescript-eslint/eslint-plugin';
-import { Linter } from 'eslint';
 
 /**
  * @type {import('eslint').Linter.Config}
@@ -27,22 +26,19 @@ const typescriptConfig = {
         caughtErrorsIgnorePattern:      '^_',
         destructuredArrayIgnorePattern: '^_',
         argsIgnorePattern:              '^_',
-      }
+      },
     ],
     'no-unused-vars': [
-        'error',
-        {
-          varsIgnorePattern:              '^_',
-          caughtErrorsIgnorePattern:      '^_',
-          destructuredArrayIgnorePattern: '^_',
-          argsIgnorePattern:              '^_',
-        },
-      ],
+      'error',
+      {
+        varsIgnorePattern:              '^_',
+        caughtErrorsIgnorePattern:      '^_',
+        destructuredArrayIgnorePattern: '^_',
+        argsIgnorePattern:              '^_',
+      },
+    ],
     'no-redeclare': 'error',
   },
 };
 
-export default [
-  defaultConfig,
-  typescriptConfig,
-];
+export default [defaultConfig, typescriptConfig];

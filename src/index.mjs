@@ -8,9 +8,9 @@ import configMap from './configMap.mjs';
  * @type {Array<import('eslint').Linter.Config>}
  */
 const defaultConfig = [
-  { 
+  {
     languageOptions: {
-      ecmaVersion:   "latest", 
+      ecmaVersion:   'latest',
       sourceType:    'module',
       parser:        tsParser,
       parserOptions: { ecmaFeatures: { jsx: true } },
@@ -20,39 +20,29 @@ const defaultConfig = [
   { ignores: [
     '**/node_modules/**',
     '**/dist/**',
-    '**/build/**', 
-    '**/.next/**', 
+    '**/build/**',
+    '**/.next/**',
     '**/next-env.d.ts',
   ] },
   baseFormatterConfig,
   baseImportConfig,
   ...baseRestrictConfig,
-]
+];
 
 function eslintCodeGuideline(config) {
-  if (!config) {
-    return defaultConfig;
-  }
+  if (!config) { return defaultConfig; }
 
   const { options, extends: extendsConfig } = config;
 
-  let configs = [
-    ...defaultConfig,
-  ]
+  let configs = [...defaultConfig];
 
   if (extendsConfig) {
     const extendItems = Array.isArray(extendsConfig) ? extendsConfig : [extendsConfig];
-    configs = [
-      ...configs,
-      ...extendItems.map(item => configMap[item]).filter(Boolean),
-    ];
+    configs = [...configs, ...extendItems.map(item => configMap[item]).filter(Boolean)];
   }
 
-  if (options) {
-    configs = [
-      ...configs,
-      ...(Array.isArray(options) ? options : [options]),
-    ];
+  if (options) { 
+    configs = [...configs, ...Array.isArray(options) ? options : [options]]; 
   }
 
   return configs;
