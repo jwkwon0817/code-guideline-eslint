@@ -60,7 +60,7 @@ const config = {
 
     '@stylistic/computed-property-spacing': ['error', 'never'],
 
-    '@stylistic/curly-newline': ['error', { minElements: 2 }],
+    '@stylistic/curly-newline': ['error', 'always'],
 
     '@stylistic/dot-location': ['error', 'property'],
 

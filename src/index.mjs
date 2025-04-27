@@ -30,7 +30,9 @@ const defaultConfig = [
 ];
 
 function eslintCodeGuideline(config) {
-  if (!config) { return defaultConfig; }
+  if (!config) {
+    return defaultConfig;
+  }
 
   const { options, extends: extendsConfig } = config;
 
@@ -39,12 +41,14 @@ function eslintCodeGuideline(config) {
   if (extendsConfig) {
     const extendItems = Array.isArray(extendsConfig) ? extendsConfig : [extendsConfig];
 
-    extendItems.forEach((item) => {
+    extendItems.forEach(item => {
       configs = [...configs, ...configMap[item]];
-    })
+    });
   }
 
-  if (options) { configs = [...configs, ...Array.isArray(options) ? options : [options]]; }
+  if (options) {
+    configs = [...configs, ...Array.isArray(options) ? options : [options]];
+  }
 
   return configs;
 }
