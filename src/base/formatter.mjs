@@ -51,9 +51,6 @@ const config = {
     '@stylistic/comma-dangle': [ 
       'error', 
       'always-multiline',
-      {
-        functions: 'never'
-      }
     ],
 
     '@stylistic/comma-spacing': [
