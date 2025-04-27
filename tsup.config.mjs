@@ -2,7 +2,7 @@ import { defineConfig } from 'tsup';
 import { dependencies, peerDependencies } from './package.json';
 
 export default defineConfig({
-  entry:        ['index.mjs'],
+  entry:        ['src/index.mjs'],
   outDir:       'dist',
   format:       ['esm', 'cjs'],
   target:       'node20',

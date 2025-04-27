@@ -4,7 +4,10 @@
   "description": "Code Guideline for eslint",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rimraf dist && tsup src/index.mjs",
+    "prepublish": "pnpm run build",
+    "lint": "eslint . --fix",
+    "lint:dry": "eslint . --fix-dry-run"
   },
   "keywords": [
     "eslint",
@@ -12,20 +15,40 @@
     "guideline",
     "generator"
   ],
-  "author": "",
+  "author": {
+    "name": "Jeewon Kwon",
+    "email": "jeewon.kwon.0817@gmail.com",
+    "url": "https://github.com/jwkwon0817"
+  },
   "license": "MIT",
   "packageManager": "pnpm@10.7.1",
   "devDependencies": {
+    "rimraf": "^6.0.1",
+    "tsup": "^8.4.0"
+  },
+  "dependencies": {
     "@stylistic/eslint-plugin": "^4.2.0",
     "@typescript-eslint/eslint-plugin": "^8.31.0",
     "@typescript-eslint/parser": "^8.31.0",
-    "eslint": "^9.25.1",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-import-newlines": "^1.4.0",
     "eslint-plugin-newline-destructuring": "^1.2.2",
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-unused-imports": "^4.1.4"
+  },
+  "peerDependencies": {
+    "eslint": "^9.25.1"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
   },
   "repository": {
     "type": "git",
