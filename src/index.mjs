@@ -41,9 +41,7 @@ function eslintCodeGuideline(config) {
     configs = [...configs, ...extendItems.map(item => configMap[item]).filter(Boolean)];
   }
 
-  if (options) { 
-    configs = [...configs, ...Array.isArray(options) ? options : [options]]; 
-  }
+  if (options) { configs = [...configs, ...Array.isArray(options) ? options : [options]]; }
 
   return configs;
 }

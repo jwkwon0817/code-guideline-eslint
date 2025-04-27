@@ -60,7 +60,7 @@ const config = {
 
     '@stylistic/computed-property-spacing': ['error', 'never'],
 
-    '@stylistic/curly-newline': ['error', { multiline: true }],
+    '@stylistic/curly-newline': ['error', { minElements: 2 }],
 
     '@stylistic/dot-location': ['error', 'property'],
 
@@ -159,7 +159,7 @@ const config = {
       },
     ],
 
-    '@stylistic/max-statements-per-line': ['error', { max: 1 }],
+    '@stylistic/max-statements-per-line': ['error', { max: 2 }],
 
     '@stylistic/member-delimiter-style': 'error',
 
