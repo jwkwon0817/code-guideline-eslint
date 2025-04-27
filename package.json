@@ -1,0 +1,34 @@
+{
+  "name": "@code-guideline/eslint",
+  "version": "0.0.1",
+  "description": "Code Guideline for eslint",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eslint",
+    "code",
+    "guideline",
+    "generator"
+  ],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.7.1",
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^4.2.0",
+    "@typescript-eslint/eslint-plugin": "^8.31.0",
+    "@typescript-eslint/parser": "^8.31.0",
+    "eslint": "^9.25.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-import-newlines": "^1.4.0",
+    "eslint-plugin-newline-destructuring": "^1.2.2",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unused-imports": "^4.1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jwkwon0817/code-guideline-eslint.git"
+  }
+}
