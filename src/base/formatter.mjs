@@ -137,7 +137,7 @@ const config = {
       'error',
       { enforce: [
         {
-          blankLine: 'never',
+          blankLine: 'always',
           prev:      'method',
           next:      'method',
         },
