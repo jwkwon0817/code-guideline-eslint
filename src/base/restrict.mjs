@@ -9,6 +9,7 @@ const defaultConfig = { rules: {
   'no-alert':             'error',
   'no-var':               'error',
   'no-duplicate-imports': 'error',
+  'no-restricted-syntax': 'off',
 } };
 
 /**
