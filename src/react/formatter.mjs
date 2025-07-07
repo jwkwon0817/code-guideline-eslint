@@ -50,7 +50,8 @@ const config = {
     '@stylistic/jsx-newline': [
       'error',
       {
-        prevent: true, allowMultilines: true,
+        prevent:         true,
+        allowMultilines: true,
       },
     ],
 
