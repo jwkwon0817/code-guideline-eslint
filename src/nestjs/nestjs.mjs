@@ -1,5 +1,5 @@
-import nestjsTyped from '@darraghor/eslint-plugin-nestjs-typed';
 import tsParser from '@typescript-eslint/parser';
+import formatterConfig from './formatter.mjs';
 
 const typedConfig = {
   languageOptions: {
@@ -14,5 +14,5 @@ const typedConfig = {
 
 export default [
   typedConfig,
-  ...nestjsTyped.configs.flatRecommended,
+  formatterConfig,
 ];
