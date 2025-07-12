@@ -36,7 +36,37 @@ export default eslintCodeGuideline(extendConfigs);
 
 ### Available Extends
 - react (Published)
-- nest (In progress)
+- nest (Published)
+
+---
+
+### 🐙 NestJS 프로젝트에서 사용하기
+
+#### 1. NestJS 관련 플러그인 설치
+
+```bash
+pnpm add -D @darraghor/eslint-plugin-nestjs-typed
+```
+
+#### 2. eslint.config.mjs 예시
+```js
+import eslintCodeGuideline from '@code-guideline/eslint';
+
+export default eslintCodeGuideline(['nest']);
+```
+
+- NestJS 전용 규칙과 타입스크립트, import, 스타일 규칙이 함께 적용됩니다.
+- @darraghor/eslint-plugin-nestjs-typed의 flatRecommended preset이 자동 적용됩니다.
+
+#### 3. tsconfig.json 설정 권장
+```json
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  }
+}
+```
 
 ## 🛠 Requirements
 

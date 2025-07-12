@@ -1,6 +1,6 @@
 {
   "name": "@code-guideline/eslint",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Code Guideline for eslint",
   "main": "index.js",
   "scripts": {
@@ -21,17 +21,16 @@
     "url": "https://github.com/jwkwon0817"
   },
   "license": "MIT",
-  "packageManager": "pnpm@10.7.1",
+  "packageManager": "pnpm@10.13.1+sha512.37ebf1a5c7a30d5fabe0c5df44ee8da4c965ca0c5af3dbab28c3a1681b70a256218d05c81c9c0dcf767ef6b8551eb5b960042b9ed4300c59242336377e01cfad",
   "devDependencies": {
-    "@code-guideline/eslint": "^0.0.5",
     "rimraf": "^6.0.1",
-    "tsup": "^8.4.0"
+    "tsup": "^8.5.0"
   },
   "dependencies": {
-    "@stylistic/eslint-plugin": "^4.2.0",
-    "@typescript-eslint/eslint-plugin": "^8.31.0",
-    "@typescript-eslint/parser": "^8.31.0",
-    "eslint-plugin-import": "^2.31.0",
+    "@stylistic/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.36.0",
+    "@typescript-eslint/parser": "^8.36.0",
+    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-import-newlines": "^1.4.0",
     "eslint-plugin-newline-destructuring": "^1.2.2",
     "eslint-plugin-promise": "^7.2.1",
@@ -39,7 +38,8 @@
     "eslint-plugin-unused-imports": "^4.1.4"
   },
   "peerDependencies": {
-    "eslint": "^9.25.1"
+    "eslint": "^9.31.0",
+    "@darraghor/eslint-plugin-nestjs-typed": "^6.7.0"
   },
   "files": [
     "dist"
