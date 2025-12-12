@@ -63,7 +63,18 @@ const config = {
       },
     ],
 
-    '@stylistic/no-multi-spaces': ['error', { ignoreEOLComments: false }],
+    '@stylistic/no-multi-spaces': [
+      'error',
+      {
+        ignoreEOLComments: false,
+        exceptions:        {
+          Property:            true,
+          TSPropertySignature: true,
+          TSIndexSignature:    true,
+          TSTypeParameter:     true,
+        },
+      },
+    ],
 
     '@stylistic/jsx-quotes': ['error', 'prefer-single'],
 
