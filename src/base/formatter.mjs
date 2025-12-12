@@ -60,7 +60,7 @@ const config = {
 
     '@stylistic/computed-property-spacing': ['error', 'never'],
 
-    '@stylistic/curly-newline': ['error', 'always'],
+    '@stylistic/curly-newline': ['error', { consistent: true }],
 
     '@stylistic/dot-location': ['error', 'property'],
 
@@ -111,24 +111,25 @@ const config = {
     '@stylistic/lines-around-comment': [
       'error',
       {
-        beforeLineComment:          true,
-        allowClassStart:            false,
-        allowClassEnd:              false,
-        allowObjectStart:           false,
-        allowObjectEnd:             false,
-        allowArrayStart:            false,
-        allowArrayEnd:              false,
+        beforeLineComment:          false,
+        beforeBlockComment:         true,
+        allowClassStart:            true,
+        allowClassEnd:              true,
+        allowObjectStart:           true,
+        allowObjectEnd:             true,
+        allowArrayStart:            true,
+        allowArrayEnd:              true,
         allowBlockStart:            true,
-        allowBlockEnd:              false,
-        allowEnumStart:             false,
-        allowEnumEnd:               false,
-        allowInterfaceStart:        false,
-        allowInterfaceEnd:          false,
-        allowModuleStart:           false,
-        allowModuleEnd:             false,
-        allowTypeStart:             false,
-        allowTypeEnd:               false,
-        applyDefaultIgnorePatterns: false,
+        allowBlockEnd:              true,
+        allowEnumStart:             true,
+        allowEnumEnd:               true,
+        allowInterfaceStart:        true,
+        allowInterfaceEnd:          true,
+        allowModuleStart:           true,
+        allowModuleEnd:             true,
+        allowTypeStart:             true,
+        allowTypeEnd:               true,
+        applyDefaultIgnorePatterns: true,
         afterHashbangComment:       true,
       },
     ],
@@ -163,11 +164,11 @@ const config = {
 
     '@stylistic/member-delimiter-style': 'error',
 
-    '@stylistic/multiline-comment-style': ['error', 'starred-block'],
+    '@stylistic/multiline-comment-style': 'off',
 
     '@stylistic/multiline-ternary': ['error', 'always-multiline'],
 
-    '@stylistic/new-parens': ['error', 'never'],
+    '@stylistic/new-parens': ['error', 'always'],
 
     '@stylistic/newline-per-chained-call': ['error', { ignoreChainWithDepth: 2 }],
 
@@ -181,7 +182,7 @@ const config = {
         ternaryOperandBinaryExpressions: false,
         ignoreJSX:                       'multi-line',
         nestedConditionalExpressions:    false,
-        enforceForArrowConditionals:     false,
+        ignoredNodes:                    ['ConditionalExpression'],
       },
     ],
 
@@ -230,13 +231,8 @@ const config = {
       { arraysInObjects: true },
     ],
 
-    '@stylistic/object-property-newline': [
-      'error',
-      {
-        allowAllPropertiesOnSameLine:   true,
-        // allowMultiplePropertiesPerLine: true, // ESLint 9.x에서 지원하지 않으므로 삭제
-      },
-    ],
+    // allowMultiplePropertiesPerLine: true, // ESLint 9.x에서 지원하지 않으므로 삭제
+    '@stylistic/object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
 
     '@stylistic/one-var-declaration-per-line': ['error', 'always'],
 
@@ -256,27 +252,52 @@ const config = {
       {
         blankLine: 'always',
         prev:      '*',
+        next:      'return',
+      },
+      {
+        blankLine: 'always',
+        prev:      '*',
+        next:      'function',
+      },
+      {
+        blankLine: 'always',
+        prev:      'function',
         next:      '*',
+      },
+      {
+        blankLine: 'always',
+        prev:      '*',
+        next:      'class',
+      },
+      {
+        blankLine: 'always',
+        prev:      'class',
+        next:      '*',
+      },
+      {
+        blankLine: 'always',
+        prev:      '*',
+        next:      'export',
+      },
+      {
+        blankLine: 'any',
+        prev:      'export',
+        next:      'export',
+      },
+      {
+        blankLine: 'always',
+        prev:      'block-like',
+        next:      '*',
+      },
+      {
+        blankLine: 'always',
+        prev:      '*',
+        next:      'block-like',
       },
       {
         blankLine: 'any',
         prev:      'import',
         next:      'import',
-      },
-      {
-        blankLine: 'never',
-        prev:      'singleline-export',
-        next:      'singleline-export',
-      },
-      {
-        blankLine: 'never',
-        prev:      'singleline-const',
-        next:      'singleline-const',
-      },
-      {
-        blankLine: 'never',
-        prev:      'let',
-        next:      'let',
       },
     ],
 

@@ -10,7 +10,13 @@ const config = {
 
     '@stylistic/jsx-closing-bracket-location': ['error', 'tag-aligned'],
 
-    '@stylistic/jsx-closing-tag-location': ['error', 'line-aligned'],
+    '@stylistic/jsx-closing-tag-location': ['error', 'tag-aligned'],
+
+    '@stylistic/jsx-indent': [
+      'error', 2, {
+        checkAttributes: true, indentLogicalExpressions: true,
+      },
+    ],
 
     '@stylistic/jsx-curly-brace-presence': [
       'error',
@@ -32,7 +38,7 @@ const config = {
     '@stylistic/jsx-curly-spacing': [
       'error',
       'never',
-      { allowMultiline: false },
+      { allowMultiline: true },
     ],
 
     '@stylistic/jsx-equals-spacing': ['error', 'never'],
@@ -43,17 +49,21 @@ const config = {
 
     '@stylistic/jsx-indent-props': ['error', 2],
 
-    '@stylistic/jsx-max-props-per-line': 'error',
+    '@stylistic/jsx-max-props-per-line': [
+      'error', { maximum: {
+        single: 3, multi: 1,
+      } },
+    ],
 
     '@stylistic/jsx-newline': [
       'error',
       {
-        prevent:         true,
+        prevent:         false,
         allowMultilines: true,
       },
     ],
 
-    '@stylistic/jsx-one-expression-per-line': ['error', { allow: 'non-jsx' }],
+    '@stylistic/jsx-one-expression-per-line': ['error', { allow: 'single-line' }],
 
     '@stylistic/jsx-pascal-case': [
       'error',
@@ -103,10 +113,10 @@ const config = {
         assignment:    'parens-new-line',
         return:        'parens-new-line',
         arrow:         'parens-new-line',
-        condition:     'parens-new-line',
-        logical:       'parens-new-line',
-        prop:          'parens-new-line',
-        propertyValue: 'parens',
+        condition:     'ignore',
+        logical:       'ignore',
+        prop:          'ignore',
+        propertyValue: 'ignore',
       },
     ],
   },
