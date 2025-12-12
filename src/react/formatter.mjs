@@ -68,10 +68,14 @@ const config = {
       {
         ignoreEOLComments: false,
         exceptions:        {
-          Property:            true,
-          TSPropertySignature: true,
-          TSIndexSignature:    true,
-          TSTypeParameter:     true,
+          Property:               true,
+          PropertyDefinition:     true,
+          TSPropertySignature:    true,
+          TSIndexSignature:       true,
+          TSTypeParameter:        true,
+          TSTypeAliasDeclaration: true,
+          TSInterfaceBody:        true,
+          TSTypeLiteral:          true,
         },
       },
     ],

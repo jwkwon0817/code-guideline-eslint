@@ -27,6 +27,11 @@ const defaultConfig = [
   baseFormatterConfig,
   baseImportConfig,
   ...baseRestrictConfig,
+
+  {
+    files: ['**/*.{ts,mts,tsx}'],
+    rules: { '@stylistic/no-multi-spaces': 'off' },
+  },
 ];
 
 function eslintCodeGuideline(extendsConfig) {
