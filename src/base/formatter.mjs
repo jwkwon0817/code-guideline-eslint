@@ -172,7 +172,13 @@ const config = {
 
     '@stylistic/newline-per-chained-call': ['error', { ignoreChainWithDepth: 2 }],
 
-    '@stylistic/no-confusing-arrow': ['error', { onlyOneSimpleParam: true }],
+    '@stylistic/no-confusing-arrow': [
+      'error',
+      {
+        onlyOneSimpleParam: true,
+        allowParens:        true,
+      },
+    ],
 
     '@stylistic/no-extra-parens': [
       'error',
@@ -182,7 +188,7 @@ const config = {
         ternaryOperandBinaryExpressions: false,
         ignoreJSX:                       'multi-line',
         nestedConditionalExpressions:    false,
-        ignoredNodes:                    ['ConditionalExpression'],
+        ignoredNodes:                    ['ConditionalExpression', 'ArrowFunctionExpression'],
       },
     ],
 

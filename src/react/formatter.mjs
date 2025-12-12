@@ -8,11 +8,9 @@ const config = {
   rules:   {
     '@stylistic/jsx-child-element-spacing': 'off',
 
-    '@stylistic/jsx-closing-bracket-location': ['error', 'tag-aligned'],
+    '@stylistic/jsx-closing-bracket-location': ['error', 'line-aligned'],
 
-    '@stylistic/jsx-closing-tag-location': ['error', 'tag-aligned'],
-
-    '@stylistic/indent': ['error', 2],
+    '@stylistic/jsx-closing-tag-location': ['error', 'line-aligned'],
 
     '@stylistic/jsx-curly-brace-presence': [
       'error',
@@ -73,17 +71,7 @@ const config = {
       },
     ],
 
-    '@stylistic/jsx-sort-props': [
-      'error',
-      {
-        ignoreCase:           true,
-        callbacksLast:        true,
-        shorthandFirst:       true,
-        multiline:            'last',
-        noSortAlphabetically: true,
-        reservedFirst:        true,
-      },
-    ],
+    '@stylistic/jsx-sort-props': 'off',
 
     '@stylistic/jsx-tag-spacing': [
       'error',

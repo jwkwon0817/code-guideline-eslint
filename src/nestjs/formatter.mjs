@@ -139,8 +139,14 @@ const config = {
     '@stylistic/multiline-ternary':        ['error', 'always-multiline'],
     '@stylistic/new-parens':               ['error', 'always'],
     '@stylistic/newline-per-chained-call': ['error', { ignoreChainWithDepth: 2 }],
-    '@stylistic/no-confusing-arrow':       ['error', { onlyOneSimpleParam: true }],
-    '@stylistic/no-extra-parens':          [
+    '@stylistic/no-confusing-arrow':       [
+      'error',
+      {
+        onlyOneSimpleParam: true,
+        allowParens:        true,
+      },
+    ],
+    '@stylistic/no-extra-parens': [
       'error',
       'all',
       {
@@ -148,7 +154,7 @@ const config = {
         ternaryOperandBinaryExpressions: false,
         ignoreJSX:                       'multi-line',
         nestedConditionalExpressions:    false,
-        ignoredNodes:                    ['ConditionalExpression'],
+        ignoredNodes:                    ['ConditionalExpression', 'ArrowFunctionExpression'],
       },
     ],
     '@stylistic/no-extra-semi':            'error',
