@@ -1,3 +1,3 @@
 import eslintCodeGuideline from './src/index.mjs';
 
-export default eslintCodeGuideline('nestjs');
+export default eslintCodeGuideline('react');

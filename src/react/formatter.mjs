@@ -12,11 +12,7 @@ const config = {
 
     '@stylistic/jsx-closing-tag-location': ['error', 'tag-aligned'],
 
-    '@stylistic/jsx-indent': [
-      'error', 2, {
-        checkAttributes: true, indentLogicalExpressions: true,
-      },
-    ],
+    '@stylistic/indent': ['error', 2],
 
     '@stylistic/jsx-curly-brace-presence': [
       'error',
@@ -55,10 +51,7 @@ const config = {
       } },
     ],
 
-    '@stylistic/jsx-newline': [
-      'error',
-      { allowMultilines: true },
-    ],
+    '@stylistic/jsx-newline': 'off',
 
     '@stylistic/jsx-one-expression-per-line': ['error', { allow: 'single-line' }],
 
@@ -70,7 +63,7 @@ const config = {
       },
     ],
 
-    '@stylistic/jsx-props-no-multi-spaces': 'error',
+    '@stylistic/no-multi-spaces': ['error', { ignoreEOLComments: false }],
 
     '@stylistic/jsx-quotes': ['error', 'prefer-single'],
 
