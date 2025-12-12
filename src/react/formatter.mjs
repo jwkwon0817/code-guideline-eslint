@@ -57,10 +57,7 @@ const config = {
 
     '@stylistic/jsx-newline': [
       'error',
-      {
-        prevent:         false,
-        allowMultilines: true,
-      },
+      { allowMultilines: true },
     ],
 
     '@stylistic/jsx-one-expression-per-line': ['error', { allow: 'single-line' }],
