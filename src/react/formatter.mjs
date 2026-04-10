@@ -68,7 +68,12 @@ const config = {
       },
     ],
 
-    '@stylistic/no-multi-spaces': 'error',
+    '@stylistic/no-multi-spaces': [
+      'error',
+      { exceptions: {
+        Property: true, ImportAttribute: true, TSPropertySignature: true, TSIndexSignature: true, TSMethodSignature: true,
+      } },
+    ],
 
     '@stylistic/jsx-quotes': ['error', 'prefer-single'],
 

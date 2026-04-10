@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.17
+
+### Fixed (styling / ESLint)
+
+- **TSX + `no-multi-spaces`:** React 프리셋에서 타입 리터럴/인터페이스 멤버는 AST상 **`TSPropertySignature`** 등이라 기본 `Property` 예외가 적용되지 않아, 정렬 공백과 **`key-spacing`이 교차 autofix**될 수 있었습니다. `exceptions`에 `TSPropertySignature`, `TSIndexSignature`, `TSMethodSignature`를 추가했습니다.
+
 ## 0.1.16
 
 ### Fixed (styling / ESLint)
@@ -9,7 +15,7 @@
 
 ### Packaging
 
-- **`exports.import` / `default`** now resolve to **`./src/index.mjs`** so installs from **git** (no pre-built `dist`) still load the config. The **`dist`** bundle remains published for **`require`** (CJS) and **TypeScript types** (`prepublishOnly` still runs `build`).
+- **`exports.import`** resolves to **`./src/index.mjs`** so **git** installs without `dist` still work for ESM. **`require`**는 **`./dist/index.cjs`**, **`types`**는 **`./dist/index.d.ts`** (`prepublishOnly`에서 빌드).
 
 ### Versioning note
 
