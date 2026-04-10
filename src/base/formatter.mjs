@@ -13,7 +13,7 @@ const config = {
     '@stylistic/array-bracket-newline': [
       'error',
       {
-        minItems: 3,
+        minItems:  3,
         multiline: true,
       },
     ],
@@ -24,7 +24,7 @@ const config = {
       'error',
       {
         ArrayExpression: 'consistent',
-        ArrayPattern: 'consistent',
+        ArrayPattern:    'consistent',
       },
     ],
 
@@ -33,7 +33,7 @@ const config = {
     '@stylistic/arrow-spacing': [
       'error',
       {
-        after: true,
+        after:  true,
         before: true,
       },
     ],
@@ -51,7 +51,7 @@ const config = {
     '@stylistic/comma-spacing': [
       'error',
       {
-        after: true,
+        after:  true,
         before: false,
       },
     ],
@@ -75,7 +75,7 @@ const config = {
     '@stylistic/generator-star-spacing': [
       'error',
       {
-        after: true,
+        after:  true,
         before: false,
       },
     ],
@@ -90,10 +90,18 @@ const config = {
       'error',
       {
         singleLine: {
-          beforeColon: false, afterColon: true,
+          beforeColon: false,
+          afterColon:  true,
         },
         multiLine: {
-          beforeColon: false, afterColon: true,
+          beforeColon: false,
+          afterColon:  true,
+          align:       {
+            beforeColon: false,
+            afterColon:  true,
+            mode:        'strict',
+            on:          'value',
+          },
         },
       },
     ],
@@ -102,7 +110,7 @@ const config = {
       'error',
       {
         before: true,
-        after: true,
+        after:  true,
       },
     ],
 
@@ -113,25 +121,25 @@ const config = {
     '@stylistic/lines-around-comment': [
       'error',
       {
-        beforeLineComment: true,
-        allowClassStart: false,
-        allowClassEnd: false,
-        allowObjectStart: false,
-        allowObjectEnd: false,
-        allowArrayStart: false,
-        allowArrayEnd: false,
-        allowBlockStart: true,
-        allowBlockEnd: false,
-        allowEnumStart: false,
-        allowEnumEnd: false,
-        allowInterfaceStart: false,
-        allowInterfaceEnd: false,
-        allowModuleStart: true,
-        allowModuleEnd: true,
-        allowTypeStart: false,
-        allowTypeEnd: false,
+        beforeLineComment:          true,
+        allowClassStart:            false,
+        allowClassEnd:              false,
+        allowObjectStart:           false,
+        allowObjectEnd:             false,
+        allowArrayStart:            false,
+        allowArrayEnd:              false,
+        allowBlockStart:            true,
+        allowBlockEnd:              false,
+        allowEnumStart:             false,
+        allowEnumEnd:               false,
+        allowInterfaceStart:        false,
+        allowInterfaceEnd:          false,
+        allowModuleStart:           true,
+        allowModuleEnd:             true,
+        allowTypeStart:             false,
+        allowTypeEnd:               false,
         applyDefaultIgnorePatterns: false,
-        afterHashbangComment: true,
+        afterHashbangComment:       true,
       },
     ],
 
@@ -140,8 +148,8 @@ const config = {
       { enforce: [
         {
           blankLine: 'always',
-          prev: 'method',
-          next: 'method',
+          prev:      'method',
+          next:      'method',
         },
       ] },
     ],
@@ -149,15 +157,15 @@ const config = {
     '@stylistic/max-len': [
       'error',
       {
-        code: Number.POSITIVE_INFINITY,
-        tabWidth: 2,
-        comments: 100,
-        ignoreComments: true,
+        code:                   Number.POSITIVE_INFINITY,
+        tabWidth:               2,
+        comments:               100,
+        ignoreComments:         true,
         ignoreTrailingComments: true,
-        ignoreUrls: true,
-        ignoreStrings: true,
+        ignoreUrls:             true,
+        ignoreStrings:          true,
         ignoreTemplateLiterals: true,
-        ignoreRegExpLiterals: true,
+        ignoreRegExpLiterals:   true,
       },
     ],
 
@@ -179,11 +187,11 @@ const config = {
       'error',
       'all',
       {
-        nestedBinaryExpressions: false,
+        nestedBinaryExpressions:         false,
         ternaryOperandBinaryExpressions: false,
-        ignoreJSX: 'multi-line',
-        nestedConditionalExpressions: false,
-        ignoredNodes: ['ArrowFunctionExpression > ConditionalExpression'],
+        ignoreJSX:                       'multi-line',
+        nestedConditionalExpressions:    false,
+        ignoredNodes:                    ['ArrowFunctionExpression > ConditionalExpression'],
       },
     ],
 
@@ -200,7 +208,7 @@ const config = {
     '@stylistic/no-multiple-empty-lines': [
       'error',
       {
-        max: 1,
+        max:    1,
         maxBOF: 0,
         maxEOF: 1,
       },
@@ -217,12 +225,12 @@ const config = {
     '@stylistic/object-curly-newline': [
       'error',
       {
-        ObjectExpression: { minProperties: 2 },
-        ObjectPattern: { minProperties: 3 },
+        ObjectExpression:  { minProperties: 2 },
+        ObjectPattern:     { minProperties: 3 },
         ImportDeclaration: { minProperties: 4 },
         ExportDeclaration: 'always',
-        TSTypeLiteral: 'always',
-        TSInterfaceBody: 'always',
+        TSTypeLiteral:     'always',
+        TSInterfaceBody:   'always',
       },
     ],
 
@@ -254,38 +262,38 @@ const config = {
       'error',
       {
         blankLine: 'always',
-        prev: '*',
-        next: '*',
+        prev:      '*',
+        next:      '*',
       },
       {
         blankLine: 'any',
-        prev: 'import',
-        next: 'import',
+        prev:      'import',
+        next:      'import',
       },
       {
         blankLine: 'never',
-        prev: 'singleline-export',
-        next: 'singleline-export',
+        prev:      'singleline-export',
+        next:      'singleline-export',
       },
       {
         blankLine: 'never',
-        prev: 'singleline-const',
-        next: 'singleline-const',
+        prev:      'singleline-const',
+        next:      'singleline-const',
       },
       {
         blankLine: 'never',
-        prev: 'let',
-        next: 'let',
+        prev:      'let',
+        next:      'let',
       },
       {
         blankLine: 'any',
-        prev: 'export',
-        next: 'export',
+        prev:      'export',
+        next:      'export',
       },
       {
         blankLine: 'any',
-        prev: 'import',
-        next: 'export',
+        prev:      'import',
+        next:      'export',
       },
     ],
 
@@ -305,7 +313,7 @@ const config = {
       'error',
       {
         before: false,
-        after: true,
+        after:  true,
       },
     ],
 
@@ -316,8 +324,8 @@ const config = {
     '@stylistic/space-before-function-paren': [
       'error',
       {
-        anonymous: 'never',
-        named: 'never',
+        anonymous:  'never',
+        named:      'never',
         asyncArrow: 'always',
       },
     ],

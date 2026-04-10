@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.18
+
+### Changed (styling)
+
+- **`@stylistic/key-spacing`:** 여러 줄 객체·타입 리터럴·인터페이스 본문에서 **`multiLine.align.on: 'value'`** 정렬을 다시 씁니다. 한 줄짜리 객체는 `singleLine`만 적용됩니다. React 프리셋의 **`no-multi-spaces` exceptions**(`TSPropertySignature` 등)와 함께 쓰므로 TSX에서 value 정렬과 연속 공백 규칙이 서로 물고 뜯는 autofix는 피합니다.
+
 ## 0.1.17
 
 ### Fixed (styling / ESLint)
