@@ -1,5 +1,5 @@
 import stylistic from '@stylistic/eslint-plugin';
-import newlineDestructuring from 'eslint-plugin-newline-destructuring';
+import newlineDestructuring from './newline-destructuring-plugin.mjs';
 
 /**
  * @type {import('eslint').Linter.Config}
@@ -181,7 +181,7 @@ const config = {
         ternaryOperandBinaryExpressions: false,
         ignoreJSX:                       'multi-line',
         nestedConditionalExpressions:    false,
-        enforceForArrowConditionals:     false,
+        ignoredNodes:                    ['ArrowFunctionExpression > ConditionalExpression'],
       },
     ],
 
@@ -232,10 +232,7 @@ const config = {
 
     '@stylistic/object-property-newline': [
       'error',
-      {
-        allowAllPropertiesOnSameLine:   true,
-        // allowMultiplePropertiesPerLine: true, // ESLint 9.x에서 지원하지 않으므로 삭제
-      },
+      { allowAllPropertiesOnSameLine: true },
     ],
 
     '@stylistic/one-var-declaration-per-line': ['error', 'always'],

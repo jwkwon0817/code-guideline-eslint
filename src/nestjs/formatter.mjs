@@ -1,5 +1,5 @@
 import stylistic from '@stylistic/eslint-plugin';
-import newlineDestructuring from 'eslint-plugin-newline-destructuring';
+import newlineDestructuring from '../base/newline-destructuring-plugin.mjs';
 
 /**
  * @type {import('eslint').Linter.Config}
@@ -147,7 +147,7 @@ const config = {
         ternaryOperandBinaryExpressions: false,
         ignoreJSX:                       'multi-line',
         nestedConditionalExpressions:    false,
-        enforceForArrowConditionals:     false,
+        ignoredNodes:                    ['ArrowFunctionExpression > ConditionalExpression'],
       },
     ],
     '@stylistic/no-extra-semi':            'error',
@@ -185,9 +185,7 @@ const config = {
     ],
     '@stylistic/object-property-newline': [
       'error',
-      {
-        allowAllPropertiesOnSameLine:   true,
-      },
+      { allowAllPropertiesOnSameLine: true },
     ],
     '@stylistic/one-var-declaration-per-line': ['error', 'always'],
     '@stylistic/operator-linebreak':           [
