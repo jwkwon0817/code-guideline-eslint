@@ -26,6 +26,9 @@ importers:
       eslint-plugin-newline-destructuring:
         specifier: ^1.2.2
         version: 1.2.2(eslint@10.2.0)
+      eslint-plugin-perfectionist:
+        specifier: ^5.8.0
+        version: 5.8.0(eslint@10.2.0)(typescript@5.8.3)
       eslint-plugin-promise:
         specifier: ^7.2.1
         version: 7.2.1(eslint@10.2.0)
@@ -863,6 +866,12 @@ packages:
     peerDependencies:
       eslint: '>=7.2.0'
 
+  eslint-plugin-perfectionist@5.8.0:
+    resolution: {integrity: sha512-k8uIptWIxkUclonCFGyDzgYs9NI+Qh0a7cUXS3L7IYZDEsjXuimFBVbxXPQQngWqMiaxJRwbtYB4smMGMqF+cw==}
+    engines: {node: ^20.0.0 || >=22.0.0}
+    peerDependencies:
+      eslint: ^8.45.0 || ^9.0.0 || ^10.0.0
+
   eslint-plugin-promise@7.2.1:
     resolution: {integrity: sha512-SWKjd+EuvWkYaS+uN2csvj0KoP43YTu7+phKQ5v+xw6+A0gutVX2yqCeCkC3uLCJFiPfR2dD8Es5L7yUsmvEaA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -1339,6 +1348,10 @@ packages:
 
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
+
+  natural-orderby@5.0.0:
+    resolution: {integrity: sha512-kKHJhxwpR/Okycz4HhQKKlhWe4ASEfPgkSWNmKFHd7+ezuQlxkA5cM3+XkBPvm1gmHen3w53qsYAv+8GwRrBlg==}
+    engines: {node: '>=18'}
 
   object-assign@4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
@@ -2663,6 +2676,15 @@ snapshots:
     dependencies:
       eslint: 10.2.0
 
+  eslint-plugin-perfectionist@5.8.0(eslint@10.2.0)(typescript@5.8.3):
+    dependencies:
+      '@typescript-eslint/utils': 8.58.1(eslint@10.2.0)(typescript@5.8.3)
+      eslint: 10.2.0
+      natural-orderby: 5.0.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+
   eslint-plugin-promise@7.2.1(eslint@10.2.0):
     dependencies:
       '@eslint-community/eslint-utils': 4.6.1(eslint@10.2.0)
@@ -3186,6 +3208,8 @@ snapshots:
       thenify-all: 1.6.0
 
   natural-compare@1.4.0: {}
+
+  natural-orderby@5.0.0: {}
 
   object-assign@4.1.1: {}
 

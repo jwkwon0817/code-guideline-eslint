@@ -1,11 +1,16 @@
 import stylistic from '@stylistic/eslint-plugin';
+import perfectionist from 'eslint-plugin-perfectionist';
 
 /**
  * @type {import("eslint").Linter.Config}
  */
 const config = {
-  plugins: { '@stylistic': stylistic },
-  rules:   {
+  files:   ['**/*.{jsx,tsx}'],
+  plugins: {
+    '@stylistic': stylistic,
+    perfectionist,
+  },
+  rules: {
     '@stylistic/jsx-child-element-spacing': 'off',
 
     '@stylistic/jsx-closing-bracket-location': ['error', 'tag-aligned'],
@@ -63,7 +68,7 @@ const config = {
       },
     ],
 
-    '@stylistic/jsx-props-no-multi-spaces': 'error',
+    '@stylistic/no-multi-spaces': 'error',
 
     '@stylistic/jsx-quotes': ['error', 'prefer-single'],
 
@@ -75,15 +80,28 @@ const config = {
       },
     ],
 
-    '@stylistic/jsx-sort-props': [
+    'perfectionist/sort-jsx-props': [
       'error',
       {
-        ignoreCase:           true,
-        callbacksLast:        true,
-        shorthandFirst:       true,
-        multiline:            'last',
-        noSortAlphabetically: true,
-        reservedFirst:        true,
+        type:       'unsorted',
+        ignoreCase: true,
+        groups:     [
+          'reserved',
+          'shorthand-prop',
+          'unknown',
+          'multiline-prop',
+          'callback',
+        ],
+        customGroups: [
+          {
+            groupName:          'reserved',
+            elementNamePattern: '^(key|ref)$',
+          },
+          {
+            groupName:          'callback',
+            elementNamePattern: '^on[A-Z]',
+          },
+        ],
       },
     ],
 

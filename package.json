@@ -1,11 +1,11 @@
 {
   "name": "@code-guideline/eslint",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "Code Guideline for eslint",
   "main": "index.js",
   "scripts": {
     "build": "rimraf dist && tsup src/index.mjs",
-    "prepublish": "pnpm run build",
+    "prepublishOnly": "pnpm run build",
     "lint": "eslint . --fix",
     "lint:dry": "eslint . --fix-dry-run",
     "test": "pnpm run build && eslint . --max-warnings 0"
@@ -35,6 +35,7 @@
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-import-newlines": "^2.0.0",
     "eslint-plugin-newline-destructuring": "^1.2.2",
+    "eslint-plugin-perfectionist": "^5.8.0",
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-simple-import-sort": "^13.0.0",
     "eslint-plugin-unused-imports": "^4.4.1"
