@@ -70,17 +70,15 @@ const config = {
 
     '@stylistic/no-multi-spaces': [
       'error',
-      {
-        exceptions: {
-          Property:            true,
-          ImportAttribute:     true,
-          TSPropertySignature: true,
-          TSIndexSignature:    true,
-          TSMethodSignature:   true,
-          TSTypeAnnotation:    true,
-          TSTypeLiteral:       true,
-        },
-      },
+      { exceptions: {
+        Property:            true,
+        ImportAttribute:     true,
+        TSPropertySignature: true,
+        TSIndexSignature:    true,
+        TSMethodSignature:   true,
+        TSTypeAnnotation:    true,
+        TSTypeLiteral:       true,
+      } },
     ],
 
     '@stylistic/jsx-quotes': ['error', 'prefer-single'],

@@ -37,9 +37,7 @@ const defaultConfig = [
  */
 const tsKeySpacingOff = {
   files: ['**/*.{ts,tsx,mts,cts}'],
-  rules: {
-    '@stylistic/key-spacing': 'off',
-  },
+  rules: { '@stylistic/key-spacing': 'off' },
 };
 
 function withTypeScriptKeySpacingDisabled(configs) {
