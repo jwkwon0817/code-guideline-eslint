@@ -5,7 +5,7 @@ import nestjsRestrictConfig from './nestjs/restrict.mjs';
 import reactFormatterConfig from './react/formatter.mjs';
 
 const configMap = {
-  react: [reactFormatterConfig],
+  react:  [reactFormatterConfig],
   nestjs: [
     nestjsFormatterConfig,
     nestjsImportConfig,

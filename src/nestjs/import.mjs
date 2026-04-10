@@ -8,12 +8,12 @@ import unusedImports from 'eslint-plugin-unused-imports';
 const config = {
   plugins: {
     'simple-import-sort': simpleImportSort,
-    'import-newlines': importNewLines,
-    'unused-imports': unusedImports,
+    'import-newlines':    importNewLines,
+    'unused-imports':     unusedImports,
   },
   settings: { 'import/resolver': {
     typescript: {},
-    node: { extensions: [
+    node:       { extensions: [
       '.js',
       '.mjs',
       '.cjs',

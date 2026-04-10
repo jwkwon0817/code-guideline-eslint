@@ -5,7 +5,7 @@ import perfectionist from 'eslint-plugin-perfectionist';
  * @type {import("eslint").Linter.Config}
  */
 const config = {
-  files: ['**/*.{jsx,tsx}'],
+  files:   ['**/*.{jsx,tsx}'],
   plugins: {
     '@stylistic': stylistic,
     perfectionist,
@@ -20,8 +20,8 @@ const config = {
     '@stylistic/jsx-curly-brace-presence': [
       'error',
       {
-        props: 'never',
-        children: 'never',
+        props:             'never',
+        children:          'never',
         propElementValues: 'always',
       },
     ],
@@ -29,7 +29,7 @@ const config = {
     '@stylistic/jsx-curly-newline': [
       'error',
       {
-        multiline: 'consistent',
+        multiline:  'consistent',
         singleline: 'forbid',
       },
     ],
@@ -53,7 +53,7 @@ const config = {
     '@stylistic/jsx-newline': [
       'error',
       {
-        prevent: true,
+        prevent:         true,
         allowMultilines: true,
       },
     ],
@@ -63,7 +63,7 @@ const config = {
     '@stylistic/jsx-pascal-case': [
       'error',
       {
-        allowAllCaps: true,
+        allowAllCaps:   true,
         allowNamespace: true,
       },
     ],
@@ -81,16 +81,16 @@ const config = {
       'error',
       {
         component: true,
-        html: true,
+        html:      true,
       },
     ],
 
     'perfectionist/sort-jsx-props': [
       'error',
       {
-        type: 'unsorted',
+        type:       'unsorted',
         ignoreCase: true,
-        groups: [
+        groups:     [
           'reserved',
           'shorthand-prop',
           'unknown',
@@ -99,11 +99,11 @@ const config = {
         ],
         customGroups: [
           {
-            groupName: 'reserved',
+            groupName:          'reserved',
             elementNamePattern: '^(key|ref)$',
           },
           {
-            groupName: 'callback',
+            groupName:          'callback',
             elementNamePattern: '^on[A-Z]',
           },
         ],
@@ -113,8 +113,8 @@ const config = {
     '@stylistic/jsx-tag-spacing': [
       'error',
       {
-        closingSlash: 'allow',
-        beforeClosing: 'never',
+        closingSlash:      'allow',
+        beforeClosing:     'never',
         beforeSelfClosing: 'always',
       },
     ],
@@ -122,13 +122,13 @@ const config = {
     '@stylistic/jsx-wrap-multilines': [
       'error',
       {
-        declaration: 'parens-new-line',
-        assignment: 'parens-new-line',
-        return: 'parens-new-line',
-        arrow: 'parens-new-line',
-        condition: 'parens-new-line',
-        logical: 'parens-new-line',
-        prop: 'parens-new-line',
+        declaration:   'parens-new-line',
+        assignment:    'parens-new-line',
+        return:        'parens-new-line',
+        arrow:         'parens-new-line',
+        condition:     'parens-new-line',
+        logical:       'parens-new-line',
+        prop:          'parens-new-line',
         propertyValue: 'parens',
       },
     ],
