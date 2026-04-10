@@ -68,12 +68,10 @@ const config = {
     '@stylistic/indent-binary-ops':        ['error', 2],
     '@stylistic/key-spacing':              [
       'error',
-      { align: {
-        beforeColon: false,
-        afterColon:  true,
-        mode:        'strict',
-        on:          'value',
-      } },
+      {
+        singleLine: { beforeColon: false, afterColon: true },
+        multiLine:  { beforeColon: false, afterColon: true },
+      },
     ],
     '@stylistic/keyword-spacing': [
       'error',
@@ -100,8 +98,8 @@ const config = {
         allowEnumEnd:               false,
         allowInterfaceStart:        false,
         allowInterfaceEnd:          false,
-        allowModuleStart:           false,
-        allowModuleEnd:             false,
+        allowModuleStart:           true,
+        allowModuleEnd:             true,
         allowTypeStart:             false,
         allowTypeEnd:               false,
         applyDefaultIgnorePatterns: false,
@@ -223,6 +221,16 @@ const config = {
         blankLine: 'never',
         prev:      'let',
         next:      'let',
+      },
+      {
+        blankLine: 'any',
+        prev:      'export',
+        next:      'export',
+      },
+      {
+        blankLine: 'any',
+        prev:      'import',
+        next:      'export',
       },
     ],
     '@stylistic/quote-props': ['error', 'as-needed'],

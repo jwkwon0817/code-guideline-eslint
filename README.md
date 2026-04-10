@@ -16,6 +16,10 @@ bun add -D @code-guideline/eslint
 
 (Ensure you have Node.js installed.)
 
+**Git dependency:** `import` resolves to the package **source** (`src/index.mjs`), so you do not need a committed `dist` folder locally. For **`require`** (CJS) or generated **`.d.ts`**, use the **npm** tarball or run `pnpm run build` in this repo before packing.
+
+**Style note (v0.1.16+):** shared config avoids **value-aligned** `key-spacing` (no padding columns before `:`) so it does not fight `no-multi-spaces` during `--fix`. See `CHANGELOG.md`.
+
 ## 📖 Usage
 
 eslint.config.mjs

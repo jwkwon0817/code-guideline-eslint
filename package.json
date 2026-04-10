@@ -1,6 +1,6 @@
 {
   "name": "@code-guideline/eslint",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "Code Guideline for eslint",
   "main": "index.js",
   "scripts": {
@@ -51,12 +51,15 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "src",
+    "CHANGELOG.md"
   ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
+      "import": "./src/index.mjs",
+      "default": "./src/index.mjs",
       "require": "./dist/index.cjs"
     }
   },
