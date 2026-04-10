@@ -2,11 +2,11 @@ import tsParser from '@typescript-eslint/parser';
 import formatterConfig from './formatter.mjs';
 
 const typedConfig = { languageOptions: {
-  parser:        tsParser,
+  parser: tsParser,
   parserOptions: {
-    project:         './tsconfig.json',
+    project: './tsconfig.json',
     tsconfigRootDir: process.cwd(),
-    sourceType:      'module',
+    sourceType: 'module',
   },
 } };
 

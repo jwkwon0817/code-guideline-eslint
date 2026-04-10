@@ -10,9 +10,9 @@ import configMap from './configMap.mjs';
 const defaultConfig = [
   {
     languageOptions: {
-      ecmaVersion:   'latest',
-      sourceType:    'module',
-      parser:        tsParser,
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      parser: tsParser,
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
     settings: { react: { version: 'detect' } },
