@@ -29,22 +29,37 @@ const defaultConfig = [
   ...baseRestrictConfig,
 ];
 
+/**
+ * `@stylistic/key-spacing` value alignment targets JS `ObjectExpression`.
+ * On TS `TSTypeLiteral` / `TSPropertySignature` it mis-reports "extra" padding and
+ * fights both manual column align and `no-multi-spaces`. TS/TSX turn it off last so
+ * nest/react presets cannot re-enable it.
+ */
+const tsKeySpacingOff = {
+  files: ['**/*.{ts,tsx,mts,cts}'],
+  rules: {
+    '@stylistic/key-spacing': 'off',
+  },
+};
+
+function withTypeScriptKeySpacingDisabled(configs) {
+  return [...configs, tsKeySpacingOff];
+}
+
 function eslintCodeGuideline(extendsConfig) {
   if (!extendsConfig) {
-    return defaultConfig;
+    return withTypeScriptKeySpacingDisabled(defaultConfig);
   }
 
   let configs = [...defaultConfig];
 
-  if (extendsConfig) {
-    const extendItems = Array.isArray(extendsConfig) ? extendsConfig : [extendsConfig];
+  const extendItems = Array.isArray(extendsConfig) ? extendsConfig : [extendsConfig];
 
-    extendItems.forEach(item => {
-      configs = [...configs, ...configMap[item]];
-    });
-  }
+  extendItems.forEach(item => {
+    configs = [...configs, ...configMap[item]];
+  });
 
-  return configs;
+  return withTypeScriptKeySpacingDisabled(configs);
 }
 
 export default eslintCodeGuideline;

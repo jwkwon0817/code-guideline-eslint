@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.19
+
+### Fixed (TypeScript / React)
+
+- **`key-spacing` vs 타입 리터럴 정렬:** `@stylistic/key-spacing`의 `multiLine.align`은 JS 객체에는 맞지만 **`TSTypeLiteral` / `?:` optional** 쪽에서는 “Extra space before value”처럼 **컬럼 맞춤 공백을 잘못 깎습니다.** `no-multi-spaces` 예외만으로는 한쪽이 계속 깨집니다. export되는 flat config **맨 끝**에 `**/*.{ts,tsx,mts,cts}`만 `@stylistic/key-spacing`: **`off`** 를 두어, 타입 블록은 **맞춘 스타일을 ESLint가 건드리지 않게** 했습니다. (`.js` / `.jsx` / `.mjs` 등은 기존 `key-spacing` 유지.)
+- React 프리셋의 **`no-multi-spaces`** 에 `TSTypeAnnotation`, `TSTypeLiteral` 예외를 유지해, TS 주변 연속 공백이 불필요하게 잡히는 경우를 줄입니다.
+
 ## 0.1.18
 
 ### Changed (styling)
