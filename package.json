@@ -57,9 +57,8 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./src/index.mjs",
-      "default": "./src/index.mjs",
+      "types":   "./dist/index.d.ts",
+      "import":  "./src/index.mjs",
       "require": "./dist/index.cjs"
     }
   },
